@@ -1,5 +1,5 @@
 <template>
-  <div class="div">
+  <div class="container dark:bg-black">
     <BaseLink />
     <ColorSwitch />
   </div>
@@ -14,5 +14,6 @@ export default {
     BaseLink,
     ColorSwitch,
   },
+  layout: 'default',
 }
 </script>

@@ -5,7 +5,11 @@
       v-if="$colorMode.preference !== 'dark'"
       @click="changeTheme('dark')"
     />
-    <IconLight v-else class="cursor-pointer" @click="changeTheme('light')" />
+    <IconLight
+      v-else
+      class="cursor-pointer fill-white text-white"
+      @click="changeTheme('light')"
+    />
   </div>
 </template>
 
@@ -23,3 +27,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.dark-icon {
+  fill: theme('colors.white');
+}
+</style>
