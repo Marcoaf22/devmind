@@ -18,7 +18,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -46,7 +46,30 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://firebase.nuxtjs.org/guide/getting-started
+    '@nuxtjs/firebase',
   ],
+
+  firebase: {
+    config: {
+      apiKey: process.env.VUE_APP_FIREBASE_KEY,
+      authDomain: 'devmind-yt.firebaseapp.com',
+      projectId: 'devmind-yt',
+      storageBucket: 'devmind-yt.appspot.com',
+      messagingSenderId: '377298870896',
+      appId: '1:377298870896:web:21d21e5734f16223c34ab5',
+      measurementId: 'G-MWFRYDCB5N',
+    },
+    services: {
+      auth: true, // Just as example. Can be any other service.
+      firestore: true,
+      storage: true,
+      analytics: true,
+      performance: true,
+    },
+  },
+
+  env: {},
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
